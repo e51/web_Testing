@@ -16,6 +16,6 @@ print_r($_GET);
 $a = $_GET['a'];
 
 
-if (isset($_GET['submit']) {
+if (isset($_GET['submit'])) {
 	// форма отправлена
 }

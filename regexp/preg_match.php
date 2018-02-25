@@ -24,3 +24,4 @@ echo $result = preg_match('/p+/', $string);     // p, + - {от 1 и более}
 
 
 
+

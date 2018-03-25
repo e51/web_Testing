@@ -14,6 +14,7 @@ class DBConnection {
         "user" => "root",
         "password" => "",
         "db" => "test"
+//        "db" => "sosed.spb.ru"
     ];
 
     private function __construct() {}

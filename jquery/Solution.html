@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Test</title>
+    <!--<script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        function valid() {
+            var state = $("input[name='sex']:checked").val();
+
+            if (!state) {
+//                return $("#message").html("<font style='color:red'>Укажите ваш пол!</font><br>"); //"ERROR";
+                return "<font style='color:red'>Укажите ваш пол!</font><br>";
+            }
+
+            alert(state);
+
+            if (state == "male") {
+                $('#img').show();
+            }
+
+            return "";
+        }
+
+
+        function checkInputSex() {
+            var sex = $('input[name="sex"]:checked').val();
+            var msg = $('#message');
+            if (!sex){
+                msg.empty();
+                //return msg.html("<font style='color:red'>Choose your sex</font><br>");
+                msg.append("<font style='color:red'>Choose your sex</font><br>");
+            } else {
+                msg.hide();
+                $('#img').show();
+            }
+            alert(sex);
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <!--<div id="test" onclick="jQuery('#test').hide()">Test</div>-->
+
+    <!--<div id="test2">Test2</div>-->
+
+<!--
+    <div class="test">Test1</div>
+    <div class="test">Test2</div>
+    <p class="test">Test3</p>
+    <p class="test">Test4</p>
+
+    <img src="1.jpg" alt="1">
+    <img src="2.jpg" alt="2" title="2">
+
+    <ul id="menu">
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+        <li><a href="">Link 3</a></li>
+        <li><a href="">Link 4</a></li>
+        <li><a href="">Link 5</a></li>
+    </ul>
+
+    <a href="">Link 6</a>
+-->
+
+
+    <form name="form" id="form">
+        <label for="female">Женский</label>
+        <input type="radio" id="female" name="sex" value="female">
+        <label for="male">Мужской</label>
+        <input type="radio" id="male" name="sex" value="male">
+        <br><br>
+        <span id="message"></span>
+        <!--<input type="button" id="done" value="Done" onclick="$('#message').html(valid())">-->
+        <input type="button" id="done" value="Done" onclick="$('#message').html(checkInputSex())">
+        <!--<input type="button" id="done" value="Done" onclick="valid()">-->
+        <input id="textfield" name="textfield" type="text" placeholder="enter something" />
+
+    </form>
+
+    <img src="1.jpg" style="display: none" id="img">
+
+
+    <script>
+
+/*
+        var str = "    Hello a b c World! "
+        alert(str);
+        alert($.trim(str));
+//        alert(jQuery.trim(str));
+*/
+
+
+/*
+//        var test2 = getElementById('test2');  // doesn't work ???
+        var test2 = $('#test2').html();
+        alert(test2);
+*/
+
+
+/*
+        // выбор элементов по классу
+        var test = $('div.test');
+
+        for (var i = 0; i < test.length; i++) {
+            test.get(i).style.color = "red";
+        }
+
+        setTimeout("$('p.test').get(0).style.color = 'green'", 2000);
+*/
+
+/*
+        // выбор по тегам
+        var test = $('div');
+        //var test = $('div, p');
+        alert(test.length);
+
+        var img = $('img[title]');
+        alert(img.length);
+*/
+
+/*
+//        var link = $('a');
+//        alert(link.length);
+
+        var link = $('#menu li a:first');   // выбрать link1
+        alert(link.length);
+        alert(link.html());
+
+        link = $('#menu li a:eq(2)');   // выбрать link1
+        alert(link.length);
+        alert(link.html());
+*/
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

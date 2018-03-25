@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <img src="1.jpg" alt="Изображение 1" title="Изображение 1"><br>
+    <img src="2.jpg"><br>
+    <img src="3.jpg"><br>
+    <img src="4.jpg" alt="Изображение 4" title="Изображение 4"><br>
+
+
+    <script>
+        $(':not(img[alt])').attr('alt', 'jQuery'); //        $('img').not('img[alt]');
+
+        var elements = $('img');
+        var text = '';
+        for (var i = 0; i < elements.length; i++) {
+            text += elements[i].src + '\n';
+//            text += elements.get(i).src + '\n';
+        }
+
+        alert(text);
+    </script>
+
+</body>
+
+</html>

@@ -12,6 +12,12 @@ $_SESSION['answer2'] = $answer2;
 
 print_r($_SESSION);
 
+//unset($_SESSION['answer1']);
+//
+//echo '<br>';
+//print_r($_SESSION);
+//echo '<br>';
+
 echo session_id();
 
 ?>

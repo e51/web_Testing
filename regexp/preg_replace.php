@@ -14,11 +14,43 @@
 //echo preg_replace($pattern, $replacement, $string);
 
 
-$string = 'murino2017/?PHPSESSID=4n6493ppjkrl3roo1ql09htpsd';
-$pattern = '~PHPSESSID=[a-zA-Z0-9]{1,}~';
+//$string = 'murino2017/?PHPSESSID=4n6493ppjkrl3roo1ql09htpsd';
+//$pattern = '~PHPSESSID=[a-zA-Z0-9]{1,}~';
+//$replacement = '';
+//
+//echo $string;
+//echo '<br>';
+//
+//echo preg_replace($pattern, $replacement, $string);
+
+
+echo preg_replace('~\.\.~', '', '../../../file2');
+//$string = '../../../file';
+//$pattern = '/\.\./';
+//$replacement = '';
+//
+//echo preg_replace($pattern, $replacement, $string);
+
+exit();
+
+$string = 'murino2017';
+$pattern = '~([a-zA-Z0-9]+)~';
+$path = 'web/index/$1';
 $replacement = '';
 
 echo $string;
 echo '<br>';
 
-echo preg_replace($pattern, $replacement, $string);
+//echo preg_replace($pattern, $path, $string);
+$path = preg_replace($pattern, $path, $string);
+
+echo '<br>';
+echo $path;
+
+
+$string = "'AND 1=1''' --";
+echo $string;
+
+echo addcslashes($string, "'");
+
+
